@@ -70,6 +70,9 @@ fi
 if [ ! -n "${BULLETTRAIN_TIME_FG+1}" ]; then
   BULLETTRAIN_TIME_FG=black
 fi
+if [ ! -n "${BULLETTRAIN_TIME_PREFIX+1}" ]; then
+  BULLETTRAIN_TIME_PREFIX=""
+fi
 
 # CUSTOM
 if [ ! -n "${BULLETTRAIN_CUSTOM_MSG+1}" ]; then
@@ -519,9 +522,9 @@ prompt_nvm() {
 
 prompt_time() {
   if [[ $BULLETTRAIN_TIME_12HR == true ]]; then
-    prompt_segment $BULLETTRAIN_TIME_BG $BULLETTRAIN_TIME_FG %D{%r}
+    prompt_segment $BULLETTRAIN_TIME_BG $BULLETTRAIN_TIME_FG $BULLETTRAIN_TIME_PREFIX" %D{%r}"
   else
-    prompt_segment $BULLETTRAIN_TIME_BG $BULLETTRAIN_TIME_FG %D{%T}
+    prompt_segment $BULLETTRAIN_TIME_BG $BULLETTRAIN_TIME_FG $BULLETTRAIN_TIME_PREFIX" %D{%T}"
   fi
 }
 
