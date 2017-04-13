@@ -128,6 +128,7 @@ NOTE: You do not need to specify *end* segment - it will be added automatically.
 |`BULLETTRAIN_TIME_12HR`|`false`|Format time using 12-hour clock (am/pm)
 |`BULLETTRAIN_TIME_BG`|`white`|Background color
 |`BULLETTRAIN_TIME_FG`|`black`|Foreground color
+|`BULLETTRAIN_TIME_PREFIX`|`""`|Prefix of the segment. Tip: Use with plugin, [`emoji-clock`](https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/emoji-clock/emoji-clock.plugin.zsh), as `BULLETTRAIN_TIME_PREFIX=$(emoji-clock)` to get an emoji clock, e.g. 🕙
 
 ### Custom
 
